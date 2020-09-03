@@ -1,0 +1,51 @@
+<h1>SpaceX Launch Programs</h1>
+<div class="content">    
+    <div class="container">
+        <h2>Filters</h2>
+        <div class="center">Launch Year</div>
+        <hr>
+        <div class="btn">
+            <button (click)="getAllData('2006')">2006</button>
+            <button (click)="getAllData('2007')">2007</button>
+            <button (click)="getAllData('2008')">2008</button>
+            <button (click)="getAllData('2009')">2009</button>
+            <button (click)="getAllData('2010')">2010</button>
+            <button (click)="getAllData('2011')">2011</button>
+            <button (click)="getAllData('2012')">2012</button>
+            <button (click)="getAllData('2013')">2013</button>
+            <button (click)="getAllData('2014')">2014</button>
+            <button (click)="getAllData('2015')">2015</button>
+            <button (click)="getAllData('2016')">2016</button>
+            <button (click)="getAllData('2017')">2017</button>
+            <button (click)="getAllData('2018')">2018</button>
+            <button (click)="getAllData('2019')">2019</button>
+            <button (click)="getAllData('2020')">2020</button>
+        </div>
+        <div class="center">successful Launch</div>
+        <hr>
+        <div class="btn">
+            <button (click)="getLaunchSuccessData(true)">true</button> <button (click)="getLaunchSuccessData(false)">false</button>
+        </div>
+        <div class="center">successful Landing</div>
+        <hr>
+        <div class="btn">
+            <button (click)="getLaunchLandData(true)">true</button> <button (click)="getLaunchLandData(false)">false</button>
+        </div>
+    </div>
+
+    <ul *ngFor="let mission of missions">
+        <li class="container">
+            <div class="showcase">
+                <img src="../../assets/img1.png" alt="">
+                <div class="inner-content">
+                    <span> <strong>{{mission.missionName}}</strong></span>
+                    <span> <strong> Mission Ids: </strong>{{mission.missionID}}</span>
+                    <span> <strong> Launch Year: </strong>{{mission.launchYear}}</span>
+                    <span> <strong> successful Launch: </strong> {{mission.successfulLaunch}}</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+
+</div>
